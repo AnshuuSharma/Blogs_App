@@ -52,6 +52,6 @@ FutureOr<void> toggleFavoriteBlogEvent(
       favoriteBlogs.add(event.blog);
       emit(BlogAddedToFavoriteActionState(blog: event.blog));
     }
-    // Optionally emit a new state to reflect the updated list
-    emit(PostFetchingSuccessfulState(posts: favoriteBlogs)); // If you want to update the UI
+    
+    emit(PostFetchingSuccessfulState(posts: favoriteBlogs));
   }
